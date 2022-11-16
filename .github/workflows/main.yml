@@ -22,6 +22,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Setup quizzle directory
+        run: |
+          cd quizzle
       - uses: actions/setup-java@v2
         with:
           distribution: 'zulu'
