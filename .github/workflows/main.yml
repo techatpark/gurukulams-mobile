@@ -22,9 +22,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Setup quizzle directory
-        run: |
-          cd quizzle
       - uses: actions/setup-java@v2
         with:
           distribution: 'zulu'
@@ -40,9 +37,13 @@ jobs:
       - run: cd quizzle
       - run: ls
       - run: flutter clean
+        working-directory: quizzle
       - run: flutter upgrade
+        working-directory: quizzle
       - run: flutter pub get
+        working-directory: quizzle
       - run: flutter build apk
+        working-directory: quizzle
       - name: Upload Diawi
         uses: rnkdsh/action-upload-diawi@v1.2.6
         with:
