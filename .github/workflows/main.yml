@@ -46,6 +46,7 @@ jobs:
         working-directory: quizzle
       - name: Upload Diawi
         uses: rnkdsh/action-upload-diawi@v1.2.6
+        working-directory: quizzle
         with:
           token: ${{ secrets.DIAWI_TOKEN }}
           file: ./build/app/outputs/flutter-apk/app-release.apk
