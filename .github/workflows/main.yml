@@ -46,5 +46,5 @@ jobs:
         uses: rnkdsh/action-upload-diawi@v1.2.6
         with:
           token: ${{ secrets.DIAWI_TOKEN }}
-          file: ./quizzlezzzzz/build/app/outputs/flutter-apk/app-release.apk
+          file: ./quizzle/build/app/outputs/flutter-apk/app-release.apk
           
